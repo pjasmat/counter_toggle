@@ -25,7 +25,6 @@ class _CW01AppState extends State<CW01App> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    // Setup animation
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 350),
@@ -34,7 +33,6 @@ class _CW01AppState extends State<CW01App> with TickerProviderStateMixin {
     _fade = Tween<double>(begin: 0, end: 1).animate(_curve);
     _controller.forward();
 
-    // Load persisted state (Grad requirement)
     _loadPersistedState();
   }
 
@@ -162,7 +160,6 @@ class _CW01AppState extends State<CW01App> with TickerProviderStateMixin {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    // Counter
                     Text('Counter',
                         style: Theme.of(context).textTheme.titleLarge),
                     const SizedBox(height: 8),
@@ -181,7 +178,6 @@ class _CW01AppState extends State<CW01App> with TickerProviderStateMixin {
                     ),
                     const SizedBox(height: 28),
 
-                    // Image toggle
                     Text('Image Toggle',
                         style: Theme.of(context).textTheme.titleLarge),
                     const SizedBox(height: 8),
@@ -218,7 +214,6 @@ class _CW01AppState extends State<CW01App> with TickerProviderStateMixin {
                       ],
                     ),
 
-                    // Reset
                     const SizedBox(height: 24),
                     ElevatedButton.icon(
                       onPressed: _confirmAndReset,

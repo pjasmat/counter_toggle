@@ -218,7 +218,7 @@ class _CW01AppState extends State<CW01App> with TickerProviderStateMixin {
                     ElevatedButton.icon(
                       onPressed: _confirmAndReset,
                       icon: const Icon(Icons.refresh),
-                      label: const Text('Reset (Grad Only)'),
+                      label: const Text('Reset'),
                       style: ElevatedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(
                           horizontal: 18,
